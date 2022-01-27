@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E59C8828-792C-424A-8A13-E42FAC8B67DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>k4_kasir</RootNamespace>
+    <AssemblyName>k4_kasir</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Programming_Lang\C#\semester3\compiled_apps\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>k4_kasir.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMenu.Designer.cs">
+      <DependentUpon>AddMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Barang.cs" />
+    <Compile Include="ConfirmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmPayment.Designer.cs">
+      <DependentUpon>ConfirmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="databaseService\AntrianPesananBarangService.cs" />
+    <Compile Include="databaseService\AntrianService.cs" />
+    <Compile Include="databaseService\BarangService.cs" />
+    <Compile Include="databaseService\IdGenerator.cs" />
+    <Compile Include="databaseService\OrderQueue.cs" />
+    <Compile Include="databaseService\PromoMenuService.cs" />
+    <Compile Include="databaseService\Queue.cs" />
+    <Compile Include="databaseService\RiwayatPesananService.cs" />
+    <Compile Include="databaseService\RiwayatTransaksi.cs" />
+    <Compile Include="DetailedMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailedMenu.Designer.cs">
+      <DependentUpon>DetailedMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailedOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailedOrder.Designer.cs">
+      <DependentUpon>DetailedOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMenu.Designer.cs">
+      <DependentUpon>EditMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="k4_kasirDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>k4_kasirDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="orderService\Drink.cs" />
+    <Compile Include="orderService\Food.cs" />
+    <Compile Include="orderService\OrderService.cs" />
+    <Compile Include="orderService\Menu.cs" />
+    <Compile Include="orderService\QueueService.cs" />
+    <Compile Include="PaymentSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentSession.Designer.cs">
+      <DependentUpon>PaymentSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddMenu.resx">
+      <DependentUpon>AddMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmPayment.resx">
+      <DependentUpon>ConfirmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailedMenu.resx">
+      <DependentUpon>DetailedMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailedOrder.resx">
+      <DependentUpon>DetailedOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMenu.resx">
+      <DependentUpon>EditMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentSession.resx">
+      <DependentUpon>PaymentSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="k4_kasirDataSet.xsc">
+      <DependentUpon>k4_kasirDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="k4_kasirDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>k4_kasirDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="k4_kasirDataSet.xss">
+      <DependentUpon>k4_kasirDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="k4_kasir_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\add.png" />
+    <Content Include="images\back.png" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\check-mark.png" />
+    <Content Include="images\contract.png" />
+    <Content Include="images\diskette.png" />
+    <Content Include="images\fast-food.ico" />
+    <Content Include="images\fast-food.png" />
+    <Content Include="images\next.png" />
+    <Content Include="images\plus.png" />
+    <Content Include="images\queue.png" />
+    <Content Include="images\trash.png" />
+    <Content Include="images\upload.png" />
+    <Content Include="k4_kasir.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="k4_kasir_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>k4_kasir.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\Logos.png" />
+    <None Include="Resources\Red.png" />
+    <None Include="Resources\Dot.png" />
+    <None Include="Resources\Minuman.png" />
+    <None Include="Resources\Makanan1.png" />
+    <None Include="Resources\Makanan.png" />
+    <None Include="Resources\K42.png" />
+    <None Include="Resources\MENU.png" />
+    <None Include="Resources\K41.png" />
+    <None Include="Resources\K4.png" />
+    <None Include="Resources\Untitled-1.png" />
+    <None Include="Resources\3506328.png" />
+    <None Include="Resources\35063281.jpg" />
+    <None Include="Resources\3506328.jpg" />
+    <None Include="images\shopping-cart.png" />
+    <None Include="images\reload.png" />
+    <Content Include="images\restaurant.png" />
+    <Content Include="images\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
